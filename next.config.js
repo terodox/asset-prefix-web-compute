@@ -7,4 +7,16 @@ const nextConfig = {
   },
 };
 
+const isProd = process.env.NODE_ENV === 'production'
+if (!isProd) {
+  nextConfig.rewrites = async () => {
+    return [
+      {
+        source: '/resources/:path*',
+        destination: '/:path*',
+      },
+    ]
+  }
+}
+
 module.exports = nextConfig
