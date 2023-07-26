@@ -5,11 +5,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-};
-
-const isProd = process.env.NODE_ENV === 'production'
-if (!isProd) {
-  nextConfig.rewrites = async () => {
+  async rewrites() {
     return [
       {
         source: '/resources/:path*',
@@ -17,6 +13,6 @@ if (!isProd) {
       },
     ]
   }
-}
+};
 
 module.exports = nextConfig
