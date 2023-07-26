@@ -30,7 +30,7 @@ export default function Home() {
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.tsx</code> - OH YEAH! {num}
+            <code className={styles.code}>pages/index.tsx</code> - OH YEAH! ROOT {num}
           </p>
           <div>
             <a
